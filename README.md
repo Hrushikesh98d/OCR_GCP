@@ -8,7 +8,7 @@ Hrushikesh Dandge
 This is a Flask web application that uses Google Document AI to extract entities from uploaded documents (e.g., PDFs). The extracted information is displayed as labels on a results page. The app uses Google Cloud's Document AI to process the documents and return structured data.
 
 ## Features
-
+asdf
 - Upload a document (PDF) through the web interface.
 - Extract entities like dates, names, or custom labels using Google Document AI.
 - Display extracted entities in a user-friendly results page.
