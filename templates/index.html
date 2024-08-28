@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document AI Processor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upload Document for Processing</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="processor_type">Select Processor Type:</label>
+        <select name="processor_type" id="processor_type">
+            <option value="e957ec7b260b45b">Promissory Note</option>
+            <option value="6ba1ae52b7a1d207">Title Commitment</option>
+            <option value="cde9d690362249cd">Closing Instruction</option>
+            <option value="2261b6904371ab95">Deed of Trust</option>
+            <option value="97834aae8d63d7fa">Loan Documentation Request</option>
+        </select><br>
+        <input type="file" name="document_file" required><br>
+        <input type="submit" value="Process Document">
+    </form>
+</body>
+</html>

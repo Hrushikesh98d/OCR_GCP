@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Processing Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Processed Entities</h1>
+    <ul>
+        {% for type_, value in entities %}
+            <li>{{ type_ }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload another document</a>
+</body>
+</html>
