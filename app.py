@@ -15,14 +15,13 @@ GOOGLE_APPLICATION_CREDENTIALS = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"
 PROJECT_ID = os.environ.get("PROJECT_ID")
 LOCATION = os.environ.get("LOCATION")
 
-
 app = Flask(__name__)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
 def process_document_sample(file_content, processor_id, mime_type="application/pdf", field_mask="entities"):
-    
+
     try:
         credentials = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
@@ -47,10 +46,12 @@ def index():
         document_file = request.files['document_file']
         processor_id = request.form['processor_type']
 
+        print(document_file, document_file.filename)
+
         if document_file:
             file_content = document_file.read()
             entities = process_document_sample(file_content, processor_id)
-            return render_template('results.html', entities=entities)
+            return render_template('results.html', pdf_path=document_file.filename, entities=entities)
 
     return render_template('index.html')
 
