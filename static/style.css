@@ -58,3 +58,27 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.table-container {
+    border: 2px solid #000; /* Black border for the box */
+    border-radius: 8px;     /* Rounded corners */
+    padding: 10px;          /* Space inside the box */
+    margin: 20px;           /* Space outside the box */
+    max-width: 800px;       /* Optional: limit the width of the box */
+    overflow-x: auto;       /* Optional: add horizontal scroll if the table is too wide */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    padding: 8px;           /* Space inside table cells */
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4; /* Light grey background for header cells */
+}
